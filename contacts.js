@@ -7,7 +7,7 @@ const updateContactsStorage = contacts => fs.writeFile(contactsPath, JSON.string
 
  
 export const listContacts = async() => {
-    const data = await fs.readFile(contactsPath);
+    const data = await fs.readFile(contactsPath, "utf-8");
     return JSON.parse(data);
 }
 
